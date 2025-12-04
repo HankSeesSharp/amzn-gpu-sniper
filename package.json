@@ -1,0 +1,16 @@
+{
+  "name": "amz-oid-snacker",
+  "version": "1.0.0",
+  "description": "small server to accept a scraped oid and embed it into a html file to autobuy the cheapest offer for a given asin via button click.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"start" : "node index.js"
+  },
+  "author": "HankSeesSharp",
+  "license": "ISC",
+  "dependencies": {
+	  "cheerio": "1.0.0",
+	  "express": "5.0.1"
+  }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RTX5080</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #18191A;
+        }
+        button {
+            font-size: 3rem;
+            padding: 20px 40px;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+		.button-container {
+			display: flex;
+			flex-direction: column;
+			gap: 20px; /* Adjust spacing between buttons */
+		}
+    </style>
+</head>
+<body>
+<div class="button-container">
+<button><a id="B0BX6LGM2X" href="https://www.amazon.de/gp/product/handle-buy-box/ref=dp_start-bbf_1_glance?ASIN=B0BX6LGM2X&amp;quantity.1=1&amp;asin.1=B0BX6LGM2X&amp;quantity=1&amp;submit.buy-now=1">MSI RTX 5080 Gaming Trio OC BUY NOW</a></button>
+<button><a id="B0DSQ1RCZV" href="https://www.amazon.de/gp/product/handle-buy-box/ref=dp_start-bbf_1_glance?ASIN=B0DSQ1RCZV&amp;quantity.1=1&amp;asin.1=B0DSQ1RCZV&amp;quantity=1&amp;submit.buy-now=1">Gigabyte RTX 5080 Gaming OC BUY NOW</a></button>
+<button><a id="B0DS643QRW" href="https://www.amazon.de/gp/product/handle-buy-box/ref=dp_start-bbf_1_glance?ASIN=B0DS643QRW&amp;quantity.1=1&amp;asin.1=B0DS643QRW&amp;quantity=1&amp;submit.buy-now=1">Asus RTX 5080 Astral OC BUY NOW</a></button>
+</div> 
+
+<script>
+async function checkForChanges(url) {
+    // Get the current time as the 'If-Modified-Since' reference
+    let lastChecked = localStorage.getItem("lastModified") || new Date(0).toUTCString();
+
+    try {
+        let response = await fetch(url, {
+            method: "GET",
+            headers: {
+                "If-Modified-Since": lastChecked // Ask server if newer version exists
+            },
+            cache: "no-cache"
+        });
+
+        if (response.status === 304) {
+            console.log("No changes detected (304 Not Modified)");
+        } else if (response.ok) {
+            console.log("Page updated, fetching new version.");
+            let newLastModified = response.headers.get("Last-Modified");
+            if (newLastModified) {
+                localStorage.setItem("lastModified", newLastModified);
+            }
+            location.reload();
+        }
+    } catch (error) {
+        console.error("Error checking for updates:", error);
+    }
+}
+
+// Run check every 30 seconds
+setInterval(() => checkForChanges(window.location.href), 5000);
+    </script>
+
+
+
+</body></html>
