@@ -1,5 +1,3 @@
-# amzn-gpu-sniper
-
 <br>
 
 <div align="center">
