@@ -19,7 +19,7 @@
 
 This is a one-click-buy sniping tool for GPUs on Amazon.<br>
 It consists of three parts:<br>
-1. GreaseMonkey Script running on different Amazon GPU listing pages, notifying you of new listings and sending the listing data to the node.js backend<br>
+1. GreaseMonkey Script running on different Amazon product pages, notifying you of new listings and sending the listing data to the node.js backend<br>
 2. A simple HTML page, that displays a button linking to the quick buy page for a given product listing<br>
 3. A node.js server, that accepts an API call from the GM script to update the HTML page with current links<br>
 
