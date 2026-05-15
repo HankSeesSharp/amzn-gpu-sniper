@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<h1 align="center">Amazon GPU Sniper</h1>
+<h1 align="center">GPU Sniper</h1>
 
 
 </div>
@@ -28,6 +28,12 @@ It consists of three parts:
 
 Download and place the files in a folder.
 Install node.js and script dependencies (cheerio "1.0.0", "express": "5.0.1"
+You might need to change the port of your node.js server, the HTML elements used to check for offers etc. 
+Also it is highly recommended to use a rotating proxy setup, so you don't get an IP block from amazon for botting :D
+I tried to find a good balance between being respectful with server load and effective with the scanning, but Amazon might still try to prevent all automation.
+Alternatively you can reduce the frequency with which the script scans for new offers.
+(Technical knowledge required. Use at your own discretion. No support provided (probably^^).)
+
 
 ## Disclaimer
 THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
