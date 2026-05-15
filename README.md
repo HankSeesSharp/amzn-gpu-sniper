@@ -17,7 +17,7 @@
  
 ## Description
 
-This is a one-click-buy sniping tool for GPUs on Amazon.<br>
+This is a one-click-buy sniping tool for GPUs on Amazon, that I made for personal use.<br>
 It consists of three parts:<br>
 1. GreaseMonkey Script running on different Amazon product pages, notifying you of new listings and sending the listing data to the node.js backend<br>
 2. A simple HTML page, that displays a button linking to the quick buy page for a given product listing<br>
